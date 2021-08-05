@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<contacts>
+    <contact>
+        <name>Airtight Holdings</name>
+        <idCode>123456</idCode>
+        <clientCategory>Standard client</clientCategory>
+        <country>Estonia</country>
+    </contact>
+    <contact>
+        <name>Fineline Inc.</name>
+        <idCode>223456</idCode>
+        <clientCategory>Standard client</clientCategory>
+        <country>Germany</country>
+    </contact>
+    <contact>
+        <name>Optimist Group</name>
+        <idCode>342256</idCode>
+        <clientCategory>VIP client</clientCategory>
+        <country>United States of America</country>
+    </contact>
+    <contact>
+        <name>Red House Realtors Ltd.</name>
+        <idCode>655756</idCode>
+        <clientCategory>Meh client</clientCategory>
+    </contact>
+    <contact>
+        <name>Playtime LLC</name>
+        <idCode>3422776</idCode>
+        <clientCategory>VIP client</clientCategory>
+    </contact>
+</contacts>

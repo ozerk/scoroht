@@ -1,0 +1,25 @@
+{
+    "name": "ozerk/scoro",
+    "description": "Scoro Hometask",
+    "require": {
+        "php": "^8",
+        "ext-simplexml": "*",
+        "league/csv": "9.7.1",
+        "ext-curl": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "authors": [
+        {
+            "name": "Ozerk Usgurlu",
+            "email": "ozerkusg@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Cli\\": "lib/",
+            "App\\": "app/"
+        }
+    }
+}

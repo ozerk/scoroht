@@ -1,0 +1,38 @@
+#!/usr/bin/php
+<?php
+
+if (php_sapi_name() !== 'cli') {
+    exit;
+}
+
+require __DIR__ . '/vendor/autoload.php';
+
+use Cli\App;
+
+$app = new App();
+
+$app->registerCommand('import', function (array $argv) use ($app) {
+    $fileName = isset ($argv[2]) ? $argv[2] : "export.xml";
+    $response = $app->getScoro()->import($fileName);
+    $app->getPrinter()->display($response);
+});
+
+$app->registerCommand('compare', function () use ($app) {
+    $response = $app->getScoro()->compareList();
+    $app->getPrinter()->display($response);
+});
+
+$app->registerCommand('run',function(array $argv) use ($app) {
+    $fileName = isset ($argv[2]) ? $argv[2] : "export.xml";
+    $app->getScoro()->import($fileName);
+    $response = $app->getScoro()->compareList();
+    $app->getPrinter()->display($response);
+});
+
+$app->registerCommand('help', function (array $argv) use ($app) {
+    $app->getPrinter()->display("usage: scorocli import [ filename ]");
+    $app->getPrinter()->display("usage: scorocli compare");
+    $app->getPrinter()->display("usage: scorocli run");
+});
+
+$app->runCommand($argv);
